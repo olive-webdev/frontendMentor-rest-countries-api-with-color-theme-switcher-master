@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+html::-webkit-scrollbar,
+input[type="checkbox"] {
+  display: none;
+}
+
+body,
+p {
+  margin: 0;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+}
+
+body svg {
+  height: 20px;
+  margin-left: auto;
+  stroke-width: 2rem;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.container {
+  margin: auto;
+  max-width: 1280px;
+  padding: 0 2rem;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+header > div {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+header p:last-child {
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+header label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  width: 100vw;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #details button {
+  cursor: pointer;
+  margin: 5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+main #details button svg {
+  margin-right: 1rem;
+}
+
+main #home,
+main #details {
+  scroll-margin-top: 80px;
+  margin-top: 5rem;
+  padding: 0 2rem 3rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: calc(100vw - 4rem);
+  min-height: calc(100vh - 80px);
+}
+
+main #home #filters,
+main #details #filters {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem auto;
+  max-width: 1280px;
+}
+
+main #home #filters input,
+main #details #filters input {
+  outline: none;
+  position: relative;
+  padding: 1rem 1rem 1rem 3.5rem;
+  width: 90vw;
+  max-width: 30rem;
+  border: none;
+  font-size: 1rem;
+}
+
+main #home #filters label,
+main #details #filters label {
+  font-size: 1.1em;
+}
+
+main #home #input,
+main #details #input {
+  position: relative;
+}
+
+main #home #input input::-webkit-input-placeholder,
+main #details #input input::-webkit-input-placeholder {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+main #home #input input:-ms-input-placeholder,
+main #details #input input:-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+main #home #input input::-ms-input-placeholder,
+main #details #input input::-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+main #home #input input::placeholder,
+main #details #input input::placeholder {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+main #home #input label,
+main #details #input label {
+  position: absolute;
+  left: 1.5rem;
+  top: 1rem;
+}
+
+main #home .country,
+main #details .country {
+  cursor: pointer;
+  width: 100%;
+  padding-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+main #home .country > :not(:first-child),
+main #details .country > :not(:first-child) {
+  padding: 0 1.5rem;
+}
+
+main #home .country img,
+main #details .country img {
+  width: 100%;
+  height: 160px;
+}
+
+main #home .country p,
+main #details .country p {
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+
+main #home .country p span,
+main #details .country p span {
+  font-weight: 300;
+}
+
+main #home .country :nth-child(2),
+main #details .country :nth-child(2) {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.8rem;
+  font-weight: 800;
+}
+
+main #home #container,
+main #details #container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  gap: clamp(2rem, 4.5vw, 5rem);
+}
+
+#filterByRegion {
+  width: 200px;
+  position: relative;
+}
+
+#filterByRegion > label {
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1.5rem;
+  border-radius: 0.3rem;
+}
+
+#regions {
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  top: 3.5rem;
+  right: 0rem;
+  padding: 1rem 0;
+}
+
+#regions p {
+  cursor: pointer;
+  padding: 0.2rem 1.5rem;
+}
+
+#regions p:hover {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+#countriesSuggested {
+  position: absolute;
+  top: 3.5rem;
+  width: 30rem;
+}
+
+#countriesSuggested p {
+  padding: 1rem;
+}
+
+#countriesSuggested p:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+#insertDetails img {
+  width: 40%;
+  height: 50%;
+  max-height: 400px;
+}
+
+#insertDetails #countryName {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+#insertDetails #infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 1rem;
+}
+
+#insertDetails #infos span {
+  font-weight: 300;
+}
+
+#insertDetails #info1,
+#insertDetails #info2 {
+  line-height: 2rem;
+}
+
+#insertDetails > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8vw;
+}
+
+#insertDetails > div > div {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#insertDetails #borders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+}
+
+#insertDetails #borders p {
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+#insertDetails #borders button {
+  padding: 0.5rem 2rem;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.lightmode header {
+  -webkit-box-shadow: 0 5px 5px 0 #ebebeb;
+          box-shadow: 0 5px 5px 0 #ebebeb;
+  background-color: white;
+}
+
+.lightmode header a {
+  color: #111517;
+}
+
+.lightmode main {
+  background-color: #fafafa;
+}
+
+.lightmode main .country {
+  background-color: white;
+}
+
+.lightmode main .country:hover {
+  -webkit-box-shadow: 0 0.3rem 1rem 0.3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.3rem 1rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+.lightmode main #filterByRegion > label {
+  background-color: white;
+}
+
+.lightmode main #regions {
+  background-color: white;
+}
+
+.lightmode main #regions p:hover {
+  background-color: #858585;
+  color: white;
+}
+
+.lightmode main #countriesSuggested {
+  background-color: white;
+}
+
+.lightmode main #countriesSuggested p:hover {
+  background-color: #858585;
+  color: white;
+}
+
+.lightmode main #details button {
+  background-color: white;
+}
+
+.lightmode main input[type="search"] {
+  background-color: white;
+  color: #111517;
+}
+
+.lightmode svg {
+  fill: none;
+  stroke: #111517;
+}
+
+.darkmode header {
+  -webkit-box-shadow: 0 5px 5px 0 #1f1f1f;
+          box-shadow: 0 5px 5px 0 #1f1f1f;
+  background-color: #2b3945;
+  color: white;
+}
+
+.darkmode header a {
+  color: white;
+}
+
+.darkmode header svg {
+  fill: orange;
+  stroke: none;
+}
+
+.darkmode main {
+  color: white;
+  background-color: #202c37;
+}
+
+.darkmode main .country {
+  background-color: #2b3945;
+}
+
+.darkmode main .country:hover {
+  -webkit-box-shadow: 0 0.3rem 1rem 0.3rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.3rem 1rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+.darkmode main #filterByRegion > label {
+  background-color: #2b3945;
+}
+
+.darkmode main #regions {
+  background-color: #2b3945;
+}
+
+.darkmode main #regions p:hover {
+  background-color: #858585;
+  color: white;
+}
+
+.darkmode main #countriesSuggested {
+  background-color: #2b3945;
+}
+
+.darkmode main #countriesSuggested p:hover {
+  background-color: #858585;
+  color: #2b3945;
+}
+
+.darkmode main #details button {
+  background-color: #2b3945;
+  color: white;
+}
+
+.darkmode main input[type="search"] {
+  background-color: #2b3945;
+  color: white;
+}
+
+.darkmode main input[type="search"]::-webkit-input-placeholder {
+  color: white;
+}
+
+.darkmode main input[type="search"]:-ms-input-placeholder {
+  color: white;
+}
+
+.darkmode main input[type="search"]::-ms-input-placeholder {
+  color: white;
+}
+
+.darkmode main input[type="search"]::placeholder {
+  color: white;
+}
+
+.darkmode svg {
+  fill: none;
+  stroke: white;
+}
+
+@media (max-width: 480px) {
+  header label p {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #inputCountry {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #filters {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 375px) {
+  #container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 480px) {
+  #container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  #container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  #filters {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1100px) {
+  #container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.shadow {
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0.1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1100px) {
+  #details .container {
+    padding: 0;
+  }
+  #insertDetails > div {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #insertDetails > div > div {
+    width: 100%;
+  }
+  #insertDetails img {
+    width: 100%;
+  }
+  #insertDetails #infos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  #borders {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

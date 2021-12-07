@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.min.css" />
+  <title>REST Countries API with color theme switcher challenge hub</title>
+</head>
+
+<body class="lightmode">
+  <header>
+    <div class="container">
+      <a href="#home">Where in the world?</a>
+      <input type="checkbox" name="mode" id="darkmode" />
+      <label for="darkmode">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71
+               216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z" />
+        </svg>
+        <p>Dark Mode</p>
+      </label>
+    </div>
+  </header>
+  <main id="main">
+    <div id="home">
+      <div id="filters">
+        <div id="input">
+          <input type="search" name="" id="inputCountry" class="shadow" placeholder="Search for a country..." />
+          <div id="countriesSuggested" class="shadow"></div>
+          <label for="country"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" />
+              <path d="M338.29 338.29L448 448" />
+            </svg></label>
+        </div>
+        <div id="filterByRegion" class="shadow">
+          <input type="checkbox" name="filterButton" id="filterButton" onclick="toggleRegions()">
+          <label id="labelButton" for="filterButton">
+            Filter by Region
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M112 184l144 144 144-144" />
+            </svg>
+          </label>
+          <div id="regions" class="none shadow">
+            <p id="africa" onclick="displayCountries('Africa'); ID('filterButton').checked = false ;toggleRegions()">
+              Africa</p>
+            <p id="america" onclick="displayCountries('Americas'); ID('filterButton').checked = false ;toggleRegions()">
+              America</p>
+            <p id="asia" onclick="displayCountries('Asia'); ID('filterButton').checked = false ;toggleRegions()">Asia
+            </p>
+            <p id="europe" onclick="displayCountries('Europe'); ID('filterButton').checked = false ;toggleRegions()">
+              Europe</p>
+            <p id="oceania" onclick="displayCountries('Oceania'); ID('filterButton').checked = false ;toggleRegions()">
+              Oceania</p>
+          </div>
+        </div>
+      </div>
+      <div id="container"></div>
+    </div>
+    <div id="details">
+      <div class="container">
+        <button onclick="getHome()" class="shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M244 400L100 256l144-144M120 256h292" />
+          </svg>
+          Back
+        </button>
+        <div id="insertDetails"></div>
+      </div>
+    </div>
+  </main>
+  <script src="./assets/javascripts/app.min.js"></script>
+</body>
+
+</html>
