@@ -1,8 +1,8 @@
-// fetch("https://restcountries.com/v3.1/all")
-//   .then((res) => res.json())
-//     .then((res) => {
-//         localStorage.setItem("countries", JSON.stringify(res))
-//     });
+fetch("https://restcountries.com/v3.1/all")
+   .then((res) => res.json())
+     .then((res) => {
+         localStorage.setItem("countries", JSON.stringify(res))
+});
 ID = (id) => {
   return document.getElementById(id);
 };
